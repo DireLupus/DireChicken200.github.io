@@ -12,14 +12,11 @@
             return res.json();
           }).then((data) => {
             console.log(data);
-            console.log(data["pages"]);
-            console.log(data["pages"][0]);
-            console.log(data["pages"][0]["page_name"]);
             for(let doc in data)
             {
               for(let item in data[doc])
               {
-                map.set(data["pages"][item]["page_name"], data["pages"][item]["page_link"]);
+                map.set(data[doc][item]["page_name"], data[doc][item]["page_link"]);
               }
             }
           });
