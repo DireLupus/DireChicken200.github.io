@@ -7,8 +7,11 @@
         .then((res) => {
           console.log(res);
           return res.json();
-        }).then((data) => console.log(data));
-  console.log("Objects" + en_us_objects);
+        }).then((data) => {
+          console.log(data);
+          console.log(data["pages"]);
+        });
+  console.log(en_us_objects);
   const not_en_us = new Map();
 
   //en_us.set("example", "https://docs.google.com/document/d/1_O2N7Ns34DysrVJ7ykGuREvqxqu-N7LxqSSl8Q9wwIk/edit")
