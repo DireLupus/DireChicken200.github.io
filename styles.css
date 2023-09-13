@@ -35,13 +35,13 @@ html {
       flex-grow: 2;
       margin: 8;
       padding: 4;
-      text-align: center;
+      text-align: -webkit-center;
       justify-content: center;
       align-items: center;
       font-size: xxx-large;
     }
     .LanguageBoxOption {
-      text-align: center;
+      text-align: -webkit-center;
       justify-content: center;
       align-items: center;
       font-size: xxx-large;
