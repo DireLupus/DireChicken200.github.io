@@ -67,7 +67,9 @@
       const urlParams = new URLSearchParams(queryString);
       const doc = urlParams.get('document_title');
 
-      window.location.href = lang.get(doc);
+      console.log(lang);
+      console.log(lang.get(doc));
+      //window.location.href = lang.get(doc);
     }
   </script>
 </html>
