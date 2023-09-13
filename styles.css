@@ -7,12 +7,13 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: xxx-large;
     }
     .Container {
       display: flex;
       flex-direction: column;
-      width: 80vw;
-      height: 40vh;
+      width: 90vw;
+      height: 90vh;
       background-color: red;
     }
     .InteractCell {
@@ -35,6 +36,7 @@ html {
       margin: 8;
       padding: 4;
       text-align: center;
+      font-size: xxx-large;
     }
     .TextBox {
       flex: 1;
@@ -42,6 +44,7 @@ html {
       margin: 8;
       padding: 4;
       text-align: center;
+      font-size: xxx-large;
     }
     .NavigateButton {
       flex-grow: 1;
@@ -51,4 +54,5 @@ html {
       margin: 8;
       padding: 4;
       text-align: center;
+      font-size: xxx-large;
     }
