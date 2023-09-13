@@ -37,7 +37,7 @@ html {
       padding: 4;
       text-align: -webkit-center;
       justify-content: space-between;
-      align-items: center;
+      align-items: space-between;
       font-size: xxx-large;
     }
     .LanguageBoxOption {
