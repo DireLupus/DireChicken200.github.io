@@ -36,6 +36,14 @@ html {
       margin: 8;
       padding: 4;
       text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: xxx-large;
+    }
+    .LanguageBoxOption {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
       font-size: xxx-large;
     }
     .TextBox {
