@@ -1,0 +1,35 @@
+html {
+      display: flex;
+    }
+    body {
+      flex: 1;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .Cell {
+      display: flex;
+      flex: 1;
+      flex-grow: 1;
+    }
+    .LanguageBox {
+      flex: 1;
+      flex-grow: 2;
+      margin: 8;
+      padding: 4;
+    }
+    .TextBox {
+      flex: 1;
+      flex-grow: 1;
+      margin: 8;
+      padding: 4;
+    }
+    .NavigateButton {
+      flex-grow: 1;
+      text-align: center;
+      align-items: center;
+      justify-content: stretch;
+      margin: 8;
+      padding: 4;
+    }
