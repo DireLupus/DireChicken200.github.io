@@ -10,6 +10,9 @@
         }).then((data) => {
           console.log(data);
           console.log(data["pages"]);
+          console.log(data["pages"][0]);
+          console.log(data["pages"][0]["page_name"]);
+          en_us.set(data["pages"][0]["page_name"], data["pages"][0]["page_link"]);
         });
   console.log(en_us_objects);
   const not_en_us = new Map();
