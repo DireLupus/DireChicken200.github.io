@@ -5,6 +5,7 @@
   const en_us = new Map();
   let en_us_objects = fetch("./language_files/en_us.json").then(response => response.json()).then(json => console.log(json));
   console.log(en_us_objects);
+  console.log("Pages: " + en_us_objects["pages"]);
   for(let page in en_us_objects["pages"]) 
   {
     en_us.set(page["page_name"], page["page_link"]);
