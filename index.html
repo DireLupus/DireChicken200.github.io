@@ -3,7 +3,7 @@
 <html>
   <script type="text/javascript">
   const en_us = new Map();
-  const en_us_objects = fetch("./language_files/en_us.json")
+  fetch("./language_files/en_us.json")
         .then((res) => {
           console.log(res);
           return res.json();
