@@ -3,8 +3,7 @@
 <html>
   <script type="text/javascript">
   const en_us = new Map();
-  let en_us_objects = await fetch("./language_files/en_us.json");
-  en_us_objects = await en_us_objects.json();
+  let en_us_objects = fetch("./language_files/en_us.json").then(response => response.json()).then(json => console.log(json));
   console.log(en_us_objects);
   for(let page in en_us_objects["pages"]) 
   {
