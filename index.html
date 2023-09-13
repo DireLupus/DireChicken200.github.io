@@ -3,10 +3,8 @@
 <html>
   <script type="text/javascript">
   const en_us = new Map();
-  const en_us_objects = fetch("./language_files/en_us.json")
-        .then((res) => {
-          return res.json();
-        });
+  let en_us_objects = fetch("./language_files/en_us.json");
+  en_us_objects = en_us_objects.json();
   console.log(en_us_objects);
   for(let page in en_us_objects["pages"]) 
   {
