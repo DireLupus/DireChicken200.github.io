@@ -24,6 +24,12 @@
 
     fill_map(en_us, "./language_files/en_us.json");
     fill_map(not_en_us, "./language_files/not_en_us.json");
+
+    const maps = new Map();
+
+    maps.set("en_us", en_us);
+    maps.set("not_en_us", not_en_us);
+
   </script>
 
   <head>
@@ -40,29 +46,28 @@
       </div>
 
       <div class="InteractCell">
-         <select name="Languages" id="lang" required=true class="LanguageBox">
-           <option value="en_us" class="LanguageBoxOption">en_us</option>
-           <option value="not_en_us" class="LanguageBoxOption">en_usn't</option>
-         </select>
-         <button onclick = "navigation_function()" class="NavigateButton">Zoom!</button>
+        <div id="language_options">
+          <script type="text/javascript">
+            var options = document.getElementById('language_options');
+
+            for(let item of maps)
+            {
+              options.innerHTML += "<button onclick=\"navigation_function(" + item[0] + ")\">" + item[0] + "</button>";
+            }
+          </script>
+        </div>
       </div>
     </div>
 
   </body>
 
   <script type="text/javascript">
-    function navigation_function () {
+    function navigation_function (lang) {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const doc = urlParams.get('document_title')
+      const doc = urlParams.get('document_title');
 
-      if(document.getElementById("lang").value == "en_us")
-      {
-        window.location.href = en_us.get(doc);
-      } else if (document.getElementById("lang").value == "not_en_us")
-      {
-        window.location.href = not_en_us.get(doc);
-      }
+      window.location.href = lang.get(doc);
     }
   </script>
 </html>
