@@ -8,22 +8,40 @@ html {
       justify-content: center;
       align-items: center;
     }
-    .Cell {
+    .Container {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+      height: 40vh;
+      background-color: red;
+    }
+    .InteractCell {
+      display: flex;
+      flex: 1;
+      flex-grow: 2;
+      background-color: green;
+    }
+    .TextCell {
       display: flex;
       flex: 1;
       flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: green;
     }
     .LanguageBox {
       flex: 1;
       flex-grow: 2;
       margin: 8;
       padding: 4;
+      text-align: center;
     }
     .TextBox {
       flex: 1;
       flex-grow: 1;
       margin: 8;
       padding: 4;
+      text-align: center;
     }
     .NavigateButton {
       flex-grow: 1;
@@ -32,4 +50,5 @@ html {
       justify-content: stretch;
       margin: 8;
       padding: 4;
+      text-align: center;
     }
