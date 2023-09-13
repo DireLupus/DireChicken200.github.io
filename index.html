@@ -3,7 +3,10 @@
 <html>
   <script type="text/javascript">
   const en_us = new Map();
-  fetch("./language_files/en_us.json")
+  const not_en_us = new Map();
+    
+  function fill_map (let map, let file) {
+    fetch(file)
         .then((res) => {
           console.log(res);
           return res.json();
@@ -14,15 +17,13 @@
           console.log(data["pages"][0]["page_name"]);
           for(let item in data["pages"])
           {
-            en_us.set(data["pages"][item]["page_name"], data["pages"][item]["page_link"]);
+            map.set(data["pages"][item]["page_name"], data["pages"][item]["page_link"]);
           }
         });
-  console.log(en_us_objects);
-  const not_en_us = new Map();
+  }
 
-  //en_us.set("example", "https://docs.google.com/document/d/1_O2N7Ns34DysrVJ7ykGuREvqxqu-N7LxqSSl8Q9wwIk/edit")
-  not_en_us.set("example", "https://docs.google.com/document/d/1_O2N7Ns34DysrVJ7ykGuREvqxqu-N7LxqSSl8Q9wwIk/edit")
-
+    fill_map(en_us, "./language_files/en_us.json");
+    fill_map(not_en_us, "./language_files/not_en_us.json");
   </script>
   <head>
     <title>Link Navigation Test</title>
