@@ -2,25 +2,28 @@
 
 <html>
   <script type="text/javascript">
-  const en_us = new Map();
-  const not_en_us = new Map();
-    
-  function fill_map (map, file) {
-    fetch(file)
-        .then((res) => {
-          console.log(res);
-          return res.json();
-        }).then((data) => {
-          console.log(data);
-          console.log(data["pages"]);
-          console.log(data["pages"][0]);
-          console.log(data["pages"][0]["page_name"]);
-          for(let item in data["pages"])
-          {
-            map.set(data["pages"][item]["page_name"], data["pages"][item]["page_link"]);
-          }
-        });
-  }
+    const en_us = new Map();
+    const not_en_us = new Map();
+      
+    function fill_map (map, file) {
+      fetch(file)
+          .then((res) => {
+            console.log(res);
+            return res.json();
+          }).then((data) => {
+            console.log(data);
+            console.log(data["pages"]);
+            console.log(data["pages"][0]);
+            console.log(data["pages"][0]["page_name"]);
+            for(let doc in data)
+            {
+              for(let item in data[doc])
+              {
+                map.set(data["pages"][item]["page_name"], data["pages"][item]["page_link"]);
+              }
+            }
+          });
+    }
 
     fill_map(en_us, "./language_files/en_us.json");
     fill_map(not_en_us, "./language_files/not_en_us.json");
