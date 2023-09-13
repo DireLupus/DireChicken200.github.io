@@ -8,7 +8,7 @@
           return res.json();
         });
   console.log(en_us_objects);
-  for(let page in en_us_objects[pages]) 
+  for(let page in en_us_objects["pages"]) 
   {
     en_us.set(page["page_name"], page["page_link"]);
     console.log(en_us);
