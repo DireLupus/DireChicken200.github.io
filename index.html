@@ -30,19 +30,20 @@
   </script>
   <head>
     <title>Link Navigation Test</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div>
-      <p>
-        *Screaming 5.0*
+    <div class="Cell">
+      <p class="TextBox">
+        Choose Language And Hit "Zoom!" To Continue
       </p>
     </div>
-    <div>
-       <select name="Languages" id="lang" required=true>
+    <div class="Cell">
+       <select name="Languages" id="lang" required=true class="LanguageBox">
          <option value="en_us">en_us</option>
          <option value="not_en_us">en_usn't</option>
        </select>
-       <button onclick = "navigation_function()">Zoom!</button>
+       <button onclick = "navigation_function()" class="NavigationButton">Zoom!</button>
     </div>
   </body>
   <script type="text/javascript">
