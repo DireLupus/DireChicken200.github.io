@@ -3,17 +3,13 @@
 <html>
   <script type="text/javascript">
   const en_us = new Map();
-  let en_us_objects = fetch("./language_files/en_us.json").then((response) => response.json());
-  console.log("Objects: " + en_us_objects);
-  for(let item in en_us_objects)
-  {
-   console.log("Item: " + item); 
-  }
-  for(let page in en_us_objects["pages"]) 
-  {
-    en_us.set(page["page_name"], page["page_link"]);
-    console.log(en_us);
-  }
+  fetch("./language_files/en_us.json").then((response) => response.json()).then(json => {
+      console.log("Json: " + json);
+      for(let page in json["pages"]) 
+      {
+        en_us.set(page["page_name"], page["page_link"]);
+      }
+    });
   const not_en_us = new Map();
 
   //en_us.set("example", "https://docs.google.com/document/d/1_O2N7Ns34DysrVJ7ykGuREvqxqu-N7LxqSSl8Q9wwIk/edit")
